@@ -8,6 +8,7 @@ environment variables or .env file - never hardcoded.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 

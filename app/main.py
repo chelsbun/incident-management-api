@@ -10,6 +10,7 @@ Main application module that:
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
@@ -28,9 +29,8 @@ async def http_exception_handler(request: Request, exc: HTTPException):
     return JSONResponse(
         status_code=exc.status_code,
         content=error_response(
-            error=exc.detail,
-            message=f"Request failed: {exc.detail}"
-        ).model_dump()
+            error=exc.detail, message=f"Request failed: {exc.detail}"
+        ).model_dump(),
     )
 
 
@@ -40,9 +40,8 @@ async def sqlalchemy_exception_handler(request: Request, exc: SQLAlchemyError):
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content=error_response(
-            error="Database error",
-            message="An error occurred while processing your request"
-        ).model_dump()
+            error="Database error", message="An error occurred while processing your request"
+        ).model_dump(),
     )
 
 
@@ -52,9 +51,8 @@ async def general_exception_handler(request: Request, exc: Exception):
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content=error_response(
-            error="Internal server error",
-            message="An unexpected error occurred"
-        ).model_dump()
+            error="Internal server error", message="An unexpected error occurred"
+        ).model_dump(),
     )
 
 

@@ -1,0 +1,127 @@
+PROJECT DEVELOPMENT RULES
+
+These rules override general AI behavior.
+
+The goal is predictable, maintainable, production-quality code.
+
+---
+
+OPERATING MODE
+
+- Work in small, controlled steps.
+- Do only what is requested.
+- No refactoring unless explicitly asked.
+- No touching unrelated files.
+- Match existing code style exactly.
+
+---
+
+SIZE LIMITS
+
+Target: 20–30 lines  
+Hard max: 50  
+
+If larger → break into subtasks.
+
+ONE:
+- file OR
+- function OR
+- component OR
+- endpoint
+
+at a time.
+
+---
+
+MANDATORY PROCESS
+
+BEFORE CODING:
+1. Restate the task.
+2. List files to change.
+3. Estimate line count.
+4. Identify possible impact.
+5. WAIT for approval.
+
+AFTER CODING:
+
+Provide:
+
+CHANGE SUMMARY
+- what changed
+- why
+- expected outcome
+
+TECHNICAL DETAILS
+- files touched
+- number of lines
+
+VERIFICATION
+step-by-step instructions
+
+Then STOP.
+
+Wait for confirmation.
+
+---
+
+FORBIDDEN UNLESS ASKED
+
+Do NOT:
+- improve naming
+- reorganize code
+- modernize patterns
+- add optimizations
+- fix nearby problems
+- introduce new tools
+- expand scope
+
+Complete the requested task only.
+
+---
+
+SAFETY REQUIREMENTS
+
+Every change must:
+- compile
+- have no linter errors
+- include error handling
+- avoid `any`
+- handle null/undefined
+- avoid duplication
+- follow existing patterns
+
+---
+
+IMPACT AWARENESS
+
+Before changing code, consider:
+- who imports it
+- where it is used
+- whether interfaces change
+
+If risk exists → explain and wait.
+
+---
+
+COMPLEXITY RULE
+
+If logic becomes hard to read:
+extract helper functions.
+
+---
+
+NAMING
+
+Follow existing naming conventions.
+
+If unsure → copy the pattern already used in the project.
+
+---
+
+DEFINITION OF DONE
+
+A task is complete when:
+- it works
+- the user confirms
+- nothing else broke
+- the code is understandable in 6 months

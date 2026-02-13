@@ -7,6 +7,7 @@ Uses dependency injection pattern for database sessions in FastAPI.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 

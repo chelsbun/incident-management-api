@@ -7,6 +7,7 @@ mapped_column syntax with type hints.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from datetime import UTC, datetime
 
 from sqlalchemy import DateTime, Integer, String, Text

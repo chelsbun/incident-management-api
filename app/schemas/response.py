@@ -7,6 +7,7 @@ WorkFlow Rule 8: consistent response structure with success/data/error/message.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from typing import Generic, TypeVar
 
 from pydantic import BaseModel, Field

@@ -7,6 +7,7 @@ All endpoints return standardized envelope responses.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
@@ -48,11 +49,5 @@ def list_tickets(
     db: Session = Depends(get_db),
 ):
     """List tickets with pagination."""
-    tickets = (
-        db.query(Ticket)
-        .order_by(Ticket.created_at.desc())
-        .offset(offset)
-        .limit(limit)
-        .all()
-    )
+    tickets = db.query(Ticket).order_by(Ticket.created_at.desc()).offset(offset).limit(limit).all()
     return success_response(data=tickets, message=f"Retrieved {len(tickets)} tickets")

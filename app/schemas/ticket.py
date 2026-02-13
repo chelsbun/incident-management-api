@@ -7,6 +7,7 @@ All fields are validated at the API boundary before reaching business logic.
 Author: Project
 Last Modified: 2026-02-12
 """
+
 from datetime import datetime
 
 from pydantic import BaseModel, Field

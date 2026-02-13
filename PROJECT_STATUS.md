@@ -58,8 +58,8 @@ Persistent volume: incident_pgdata
 
 Environment configuration is stored in `.env`.
 
-Example DATABASE_URL:
-postgresql+psycopg2://incident_user:incident_pass@localhost:5432/incident_db
+Example DATABASE_URL (copy from .env.example and set your password):
+postgresql+psycopg2://incident_user:YOUR_PASSWORD@localhost:5432/incident_db
 
 
 DATABASE STATUS

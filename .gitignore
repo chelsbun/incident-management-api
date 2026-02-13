@@ -1,0 +1,21 @@
+# virtual environment
+.venv/
+
+# environment variables
+.env
+
+# python cache
+__pycache__/
+*.pyc
+
+# test databases
+test.db
+*.db
+
+# editors
+.vscode/
+.cursor/
+
+# OS junk
+.DS_Store
+Thumbs.db

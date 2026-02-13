@@ -19,3 +19,6 @@ test.db
 # OS junk
 .DS_Store
 Thumbs.db
+
+# personal session context
+NEXT_SESSION.md
